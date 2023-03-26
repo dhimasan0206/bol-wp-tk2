@@ -26,6 +26,7 @@ return new class extends Migration
             $table->unsignedInteger('exam');
             $table->string('grade');
             $table->timestamps();
+            $table->unique(['student_id', 'course_id']);
         });
     }
 

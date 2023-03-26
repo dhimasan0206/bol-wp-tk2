@@ -45,5 +45,6 @@ Langkah pengerjaan:
 18. Jalankan `docker-compose exec myapp php artisan make:controller ScoreController` untuk membuat controller dengan nama ScoreController dan tambah metode CRUD
 19. Jalankan `docker-compose exec myapp php artisan make:seeder CourseSeeder` untuk membantu mengisi data dummy Course
 20. Jalankan `docker-compose exec myapp php artisan make:factory CourseFactory` untuk membuat CourseFactory
+21. Jalankan `docker-compose exec myapp php artisan make:seeder ScoreSeeder` untuk membantu mengisi data dummy Score
 
 Terima kasih
