@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 })->name('dashboard');
+
 // Student CRUD
 // Student List
 Route::get('/students', [StudentController::class, 'index'])->name('student-list');
@@ -30,3 +32,17 @@ Route::get('/students/{id}/edit', [StudentController::class, 'edit'])->name('stu
 Route::post('/students/{id}/edit', [StudentController::class, 'update'])->name('student-update');
 // Student Delete
 Route::get('/students/{id}/delete', [StudentController::class, 'destroy'])->name('student-delete');
+
+// Course CRUD
+// Course List
+Route::get('/courses', [CourseController::class, 'index'])->name('course-list');
+// Course Create
+Route::get('/courses/add', [CourseController::class, 'create'])->name('course-create');
+Route::post('/courses/store', [CourseController::class, 'store'])->name('course-store');
+// Course View
+Route::get('/courses/{id}', [CourseController::class, 'show'])->name('course-view');
+// Course Update
+Route::get('/courses/{id}/edit', [CourseController::class, 'edit'])->name('course-edit');
+Route::post('/courses/{id}/edit', [CourseController::class, 'update'])->name('course-update');
+// Course Delete
+Route::get('/courses/{id}/delete', [CourseController::class, 'destroy'])->name('course-delete');

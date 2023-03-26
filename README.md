@@ -35,9 +35,15 @@ Langkah pengerjaan:
 8. Jalankan `docker-compose exec myapp php artisan make:seeder StudentSeeder` untuk membantu mengisi data dummy Student
 9. Jalankan `docker-compose exec myapp php artisan migrate:fresh --seed` untuk melakukan migrasi skema basis data.
 10. Jalankan `docker-compose exec myapp php artisan make:controller StudentController` untuk membuat controller dengan nama StudentController dan tambah metode CRUD
-11. Jalankan `docker-compose exec myapp php artisan make:migration create_grade_table` untuk membuat migrasi basis data grade dan tambahkan field yang dibutuhkan
-12. Jalankan `docker-compose exec myapp php artisan migrate:fresh --seed` untuk melakukan migrasi skema basis data.
-13. Jalankan `docker-compose exec myapp php artisan make:model Grade` untuk membuat model Grade
-14. Jalankan `docker-compose exec myapp php artisan make:controller GradeController` untuk membuat controller dengan nama GradeController dan tambah metode CRUD
+11. Jalankan `docker-compose exec myapp php artisan make:migration create_course_table` untuk membuat migrasi basis data course dan tambahkan field yang dibutuhkan
+12. Jalankan `docker-compose exec myapp php artisan make:model Course` untuk membuat model Course
+13. Jalankan `docker-compose exec myapp php artisan migrate` untuk melakukan migrasi skema basis data.
+14. Jalankan `docker-compose exec myapp php artisan make:controller CourseController` untuk membuat controller dengan nama CourseController dan tambah metode CRUD
+15. Jalankan `docker-compose exec myapp php artisan make:migration create_grade_table` untuk membuat migrasi basis data grade dan tambahkan field yang dibutuhkan
+16. Jalankan `docker-compose exec myapp php artisan make:factory GradeFactory` untuk membuat GradeFactory
+17. Jalankan `docker-compose exec myapp php artisan make:model Grade` untuk membuat model Grade
+18. Jalankan `docker-compose exec myapp php artisan make:seeder GradeSeeder` untuk membantu mengisi data dummy Grade
+19. Jalankan `docker-compose exec myapp php artisan migrate:fresh --seed` untuk melakukan migrasi skema basis data.
+20. Jalankan `docker-compose exec myapp php artisan make:controller GradeController` untuk membuat controller dengan nama GradeController dan tambah metode CRUD
 
 Terima kasih

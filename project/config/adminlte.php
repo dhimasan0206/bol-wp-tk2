@@ -312,6 +312,22 @@ return [
                 ],
             ],
         ],
+        [
+            'text'    => 'Course',
+            'icon'    => 'fas fa-fw fa-user',
+            'submenu' => [
+                [
+                    'text' => 'List',
+                    'url'  => 'courses',
+                    'icon' => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Add',
+                    'url'  => 'courses/add',
+                    'icon' => 'fas fa-fw fa-plus',
+                ],
+            ],
+        ],
     ],
 
     /*
