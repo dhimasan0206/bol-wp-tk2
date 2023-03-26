@@ -43,5 +43,7 @@ Langkah pengerjaan:
 16. Jalankan `docker-compose exec myapp php artisan make:model Score` untuk membuat model Score
 17. Jalankan `docker-compose exec myapp php artisan migrate` untuk melakukan migrasi skema basis data.
 18. Jalankan `docker-compose exec myapp php artisan make:controller ScoreController` untuk membuat controller dengan nama ScoreController dan tambah metode CRUD
+19. Jalankan `docker-compose exec myapp php artisan make:seeder CourseSeeder` untuk membantu mengisi data dummy Course
+20. Jalankan `docker-compose exec myapp php artisan make:factory CourseFactory` untuk membuat CourseFactory
 
 Terima kasih

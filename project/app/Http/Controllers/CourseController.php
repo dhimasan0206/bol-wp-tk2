@@ -23,8 +23,8 @@ class CourseController extends Controller
         foreach (Course::all() as $key => $value) {
             $config['data'][] = [
                 $value->id,
-                $value->name,
                 $value->code,
+                $value->name,
                 '
                     <a
                         class="btn btn-xs btn-default text-teal mx-1 shadow"
