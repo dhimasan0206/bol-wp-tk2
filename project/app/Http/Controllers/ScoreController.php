@@ -26,7 +26,14 @@ class ScoreController extends Controller
             'order' => [[1, 'asc']],
             'columns' => [null, null, null, ['orderable' => false]],
         ];
+        $scores = [
+            'A' => 0,
+            'B' => 0,
+            'C' => 0,
+            'D' => 0,
+        ];
         foreach (Score::all() as $key => $value) {
+            $scores[$value->grade]++; 
             $config['data'][] = [
                 $value->id,
                 $value->student->name,
@@ -65,7 +72,7 @@ class ScoreController extends Controller
                 '
             ];
         }
-        return view('score-list', compact('heads', 'config'));
+        return view('score-list', compact('heads', 'config', 'scores'));
     }
 
     public function create() {
@@ -173,7 +180,14 @@ class ScoreController extends Controller
             'order' => [[1, 'asc']],
             'columns' => [null, null, null, ['orderable' => false]],
         ];
+        $scores = [
+            'A' => 0,
+            'B' => 0,
+            'C' => 0,
+            'D' => 0,
+        ];
         foreach (Score::where('student_id', $id)->get() as $key => $value) {
+            $scores[$value->grade]++;
             $config['data'][] = [
                 $value->id,
                 $value->student->name,
@@ -212,7 +226,7 @@ class ScoreController extends Controller
                 '
             ];
         }
-        return view('score-list', compact('heads', 'config'));
+        return view('score-list', compact('heads', 'config', 'scores'));
     }
 
     public function showByCourse($id) {
@@ -232,7 +246,14 @@ class ScoreController extends Controller
             'order' => [[1, 'asc']],
             'columns' => [null, null, null, ['orderable' => false]],
         ];
+        $scores = [
+            'A' => 0,
+            'B' => 0,
+            'C' => 0,
+            'D' => 0,
+        ];
         foreach (Score::where('course_id', $id)->get() as $key => $value) {
+            $scores[$value->grade]++;
             $config['data'][] = [
                 $value->id,
                 $value->course->name,
@@ -271,7 +292,7 @@ class ScoreController extends Controller
                 '
             ];
         }
-        return view('score-list', compact('heads', 'config'));
+        return view('score-list', compact('heads', 'config','scores'));
     }
 
     public function destroy($id) {
