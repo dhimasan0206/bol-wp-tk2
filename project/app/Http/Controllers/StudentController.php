@@ -60,6 +60,14 @@ class StudentController extends Controller
                     >
                         <i class="fa fa-lg fa-fw fa-trash"></i>
                     </a>
+                    <a 
+                        class="btn btn-xs btn-default text-warning mx-1 shadow"
+                        title="Score"
+                        role="button"
+                        href="/students/'.$value->id.'/scores"
+                    >
+                        <i class="fa fa-lg fa-fw fa-star"></i>
+                    </a>
                 '
             ];
         }

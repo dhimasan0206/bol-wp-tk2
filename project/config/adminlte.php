@@ -314,7 +314,7 @@ return [
         ],
         [
             'text'    => 'Course',
-            'icon'    => 'fas fa-fw fa-user',
+            'icon'    => 'fas fa-fw fa-book',
             'submenu' => [
                 [
                     'text' => 'List',
@@ -324,6 +324,22 @@ return [
                 [
                     'text' => 'Add',
                     'url'  => 'courses/add',
+                    'icon' => 'fas fa-fw fa-plus',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Score',
+            'icon'    => 'fas fa-fw fa-star',
+            'submenu' => [
+                [
+                    'text' => 'List',
+                    'url'  => 'scores',
+                    'icon' => 'fas fa-fw fa-list',
+                ],
+                [
+                    'text' => 'Add',
+                    'url'  => 'scores/add',
                     'icon' => 'fas fa-fw fa-plus',
                 ],
             ],

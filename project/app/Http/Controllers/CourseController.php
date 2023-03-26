@@ -15,16 +15,6 @@ class CourseController extends Controller
             'Name',
             'Actions',
         ];
-        
-        $btnEdit = '<button class="btn btn-xs btn-default text-primary mx-1 shadow" title="Edit">
-                        <i class="fa fa-lg fa-fw fa-pen"></i>
-                    </button>';
-        $btnDelete = '<button class="btn btn-xs btn-default text-danger mx-1 shadow" title="Delete">
-                          <i class="fa fa-lg fa-fw fa-trash"></i>
-                      </button>';
-        $btnDetails = '<button class="btn btn-xs btn-default text-teal mx-1 shadow" title="Details">
-                           <i class="fa fa-lg fa-fw fa-eye"></i>
-                       </button>';
         $config = [
             'data' => [],
             'order' => [[1, 'asc']],
@@ -59,6 +49,14 @@ class CourseController extends Controller
                         href="/courses/'.$value->id.'/delete"
                     >
                         <i class="fa fa-lg fa-fw fa-trash"></i>
+                    </a>
+                    <a 
+                        class="btn btn-xs btn-default text-warning mx-1 shadow"
+                        title="Score"
+                        role="button"
+                        href="/courses/'.$value->id.'/scores"
+                    >
+                        <i class="fa fa-lg fa-fw fa-star"></i>
                     </a>
                 '
             ];
