@@ -12,8 +12,8 @@ class ScoreController extends Controller
     public function index() {
         $heads = [
             'ID',
-            'Student ID',
-            'Course ID',
+            'Student',
+            'Course',
             'Quiz',
             'Assignment',
             'Attendance',
@@ -29,8 +29,8 @@ class ScoreController extends Controller
         foreach (Score::all() as $key => $value) {
             $config['data'][] = [
                 $value->id,
-                $value->student_id,
-                $value->course_id,
+                $value->student->name,
+                $value->course->name,
                 $value->quiz,
                 $value->assignment,
                 $value->attendance,
@@ -159,8 +159,8 @@ class ScoreController extends Controller
     public function showByStudent($id) {
         $heads = [
             'ID',
-            'Student ID',
-            'Course ID',
+            'Student',
+            'Course',
             'Quiz',
             'Assignment',
             'Attendance',
@@ -176,8 +176,8 @@ class ScoreController extends Controller
         foreach (Score::where('student_id', $id)->get() as $key => $value) {
             $config['data'][] = [
                 $value->id,
-                $value->student_id,
-                $value->course_id,
+                $value->student->name,
+                $value->course->name,
                 $value->quiz,
                 $value->assignment,
                 $value->attendance,
@@ -218,8 +218,8 @@ class ScoreController extends Controller
     public function showByCourse($id) {
         $heads = [
             'ID',
-            'Student ID',
-            'Course ID',
+            'Course',
+            'Student',
             'Quiz',
             'Assignment',
             'Attendance',
@@ -235,8 +235,8 @@ class ScoreController extends Controller
         foreach (Score::where('course_id', $id)->get() as $key => $value) {
             $config['data'][] = [
                 $value->id,
-                $value->student_id,
-                $value->course_id,
+                $value->course->name,
+                $value->student->name,
                 $value->quiz,
                 $value->assignment,
                 $value->attendance,
